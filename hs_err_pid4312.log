@@ -1,0 +1,125 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=4312, tid=8152
+#
+# JRE version:  (7.0_45-b18) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.45-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002700800):  JavaThread "Unknown thread" [_thread_in_vm, id=8152, stack(0x0000000002600000,0x0000000002700000)]
+
+Stack: [0x0000000002600000,0x0000000002700000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002700800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=8152, stack(0x0000000002600000,0x0000000002700000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff761500000 - 0x00007ff761533000 	C:\WINDOWS\system32\java.exe
+0x00007ffd79f20000 - 0x00007ffd7a0cc000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd77bd0000 - 0x00007ffd77d0e000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffd77480000 - 0x00007ffd77595000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffd75b90000 - 0x00007ffd75c1e000 	C:\WINDOWS\system32\apphelp.dll
+0x00007ffd67900000 - 0x00007ffd67953000 	C:\WINDOWS\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffd77b20000 - 0x00007ffd77bca000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffd76eb0000 - 0x00007ffd76ede000 	C:\WINDOWS\system32\SspiCli.dll
+0x00007ffd79d30000 - 0x00007ffd79d84000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x00007ffd78280000 - 0x00007ffd783f7000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffd780e0000 - 0x00007ffd78274000 	C:\WINDOWS\system32\ole32.dll
+0x00007ffd784f0000 - 0x00007ffd79a09000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffd76630000 - 0x00007ffd76651000 	C:\WINDOWS\system32\USERENV.dll
+0x00007ffd77a70000 - 0x00007ffd77b1a000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffd6edc0000 - 0x00007ffd6edde000 	C:\WINDOWS\system32\MPR.dll
+0x00007ffd79a30000 - 0x00007ffd79b71000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffd78490000 - 0x00007ffd784e9000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x00007ffd77e70000 - 0x00007ffd78081000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x00007ffd77d10000 - 0x00007ffd77e61000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffd77070000 - 0x00007ffd77085000 	C:\WINDOWS\system32\profapi.dll
+0x00007ffd75810000 - 0x00007ffd758c2000 	C:\WINDOWS\system32\SHCORE.dll
+0x00007ffd780a0000 - 0x00007ffd780d6000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffd77910000 - 0x00007ffd77a63000 	C:\WINDOWS\system32\MSCTF.dll
+0x00007ffd77040000 - 0x00007ffd7706f000 	C:\WINDOWS\system32\nvinitx.dll
+0x00007ffd63ff0000 - 0x00007ffd64152000 	C:\WINDOWS\system32\NV\igdumd64.dll
+0x00007ffd77660000 - 0x00007ffd7783a000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x00007ffd771a0000 - 0x00007ffd771ef000 	C:\WINDOWS\system32\CFGMGR32.dll
+0x00007ffd63e80000 - 0x00007ffd63fe2000 	C:\WINDOWS\system32\NV\igd10umd64.dll
+0x0000000180000000 - 0x00000001800e7000 	C:\Program Files (x86)\MacType\MacType64.dll
+0x00007ffd76ff0000 - 0x00007ffd77011000 	C:\Program Files (x86)\MacType\EasyHK64.dll
+0x00007ffd78470000 - 0x00007ffd78477000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffd75030000 - 0x00007ffd752ab000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17415_none_6240486fecbd8abb\COMCTL32.dll
+0x000000005cd50000 - 0x000000005ce22000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000005b5f0000 - 0x000000005bdb9000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x00007ffd73760000 - 0x00007ffd73769000 	C:\WINDOWS\system32\WSOCK32.dll
+0x00007ffd73080000 - 0x00007ffd730a2000 	C:\WINDOWS\system32\WINMM.dll
+0x00007ffd79ec0000 - 0x00007ffd79f1a000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffd72e90000 - 0x00007ffd72eba000 	C:\WINDOWS\system32\WINMMBASE.dll
+0x0000000000b40000 - 0x0000000000b49000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffd75e00000 - 0x00007ffd75e28000 	C:\WINDOWS\system32\DEVOBJ.dll
+0x000000005d580000 - 0x000000005d58f000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x000000005d550000 - 0x000000005d578000 	C:\Program Files\Java\jre7\bin\java.dll
+0x000000005d530000 - 0x000000005d545000 	C:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+java_command: <unknown>
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Python27\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\CTEX\UserData\miktex\bin;C:\CTEX\MiKTeX\miktex\bin;C:\CTEX\CTeX\ctex\bin;C:\CTEX\CTeX\cct\bin;C:\CTEX\CTeX\ty\bin;C:\CTEX\Ghostscript\gs9.05\bin;C:\CTEX\GSview\gsview;C:\CTEX\WinEdt;C:\Program Files (x86)\MacType;C:\Program Files (x86)\Bitvise SSH Client;G:\MATLAB\R2013a\runtime\win64;G:\MATLAB\R2013a\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\MinGW\bin;C:\cygwin\bin;D:\opencv\build\java\x64;C:\Android\sdk\platform-tools;C:\Program Files\Mercurial\;C:\Program Files (x86)\gnuplot\bin;.;;.;;.;
+USERNAME=cxm170
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 8195260k(2932868k free), swap 8195260k(5944k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.45-b08) for windows-amd64 JRE (1.7.0_45-b18), built on Oct  8 2013 05:47:22 by "java_re" with unknown MS VC++:1600
+
+time: Thu Nov 27 17:54:24 2014
+elapsed time: 0 seconds
+

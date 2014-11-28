@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, PhotoIntentActivity!</string>
+    <string name="app_name">ENDA</string>
+    <string name="btnIntend">Take Pic</string>
+    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="btnIntendV">Take Video</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">CameraSample</string>
+    <string name="textViewTest">Text View</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="btnChoosePicIntend">Choose Pic</string>
+    <string name="scanWiFi">Scan Wi-Fi</string>
+    <string name="restoreWiFi">Restore Wi-Fi</string>
+    <string name="offload">Offload</string>
+    <string name="showWifiConfiguration">Show</string>
+    <string name="scanAndChoose">Scan</string>
+    <string name="requestWifiSelect">Request</string>
+
+    <!--  Menu items -->
+    <string name="settings">Settings</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

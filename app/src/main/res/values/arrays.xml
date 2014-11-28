@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright (C) 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+
+
+
+
+
+    <string-array name="listOffloadingFilePath">
+        <item>/sdcard/Pictures/input_small.jpg</item>
+        <item>/sdcard/Pictures/input_medium.jpg</item>
+        <item>/sdcard/Pictures/input_large.jpg</item>
+    </string-array>
+
+    <string-array name="listFixedDelay">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+        <item>13</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="listServerDelay">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+        <item>13</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="listCount">
+        <item>1</item>
+         <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="listHttpGet">
+        <item>http://lijiwei.tk:25004/facedetection/output/output_small.jpg</item>
+        <item>http://lijiwei.tk:25004/facedetection/output/output_medium.jpg</item>
+        <item>http://lijiwei.tk:25004/facedetection/output/output_large.jpg</item>
+    </string-array>
+
+    <string-array name="listQuality">
+        <item>0.1</item>
+        <item>0.2</item>
+        <item>0.3</item>
+        <item>0.4</item>
+        <item>0.5</item>
+        <item>0.6</item>
+        <item>0.7</item>
+        <item>0.8</item>
+
+    </string-array>
+
+</resources>
