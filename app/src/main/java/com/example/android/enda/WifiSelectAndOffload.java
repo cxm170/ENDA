@@ -158,6 +158,8 @@ public class WifiSelectAndOffload extends Activity implements
     private Button show;
     private Button scan;
     private Button request;
+    private Button showBattery;
+    private Button resetBattery;
     private boolean mReceiveNetwork;
     private String offloadingFilePath;
     private int fixedDelay;
@@ -221,7 +223,7 @@ public class WifiSelectAndOffload extends Activity implements
             });
         }
     };
-    private int serverDelay;
+    private double serverDelay;
     Button.OnClickListener mOffloadListener = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -253,6 +255,22 @@ public class WifiSelectAndOffload extends Activity implements
             long startingTime = calendar.getTimeInMillis();
 
             (new ScheduleOffloadingTasks(startingTime)).offloadingTasks();
+        }
+    };
+    Button.OnClickListener mShowBattery = new Button.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String result = BatteryStats.dumpBatteryInfo();
+            mTextView.setText(result);
+
+        }
+    };
+
+    Button.OnClickListener mResetBattery = new Button.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            BatteryStats.resetBatteryInfo();
+            mTextView.setText(null);
         }
     };
     private List<Location> tempLocations = new ArrayList<Location>();
@@ -299,6 +317,10 @@ public class WifiSelectAndOffload extends Activity implements
 
         request = (Button) findViewById(R.id.requestWifiSelect);
 
+        showBattery = (Button) findViewById(R.id.showBattery);
+
+        resetBattery = (Button) findViewById(R.id.resetBattery);
+
         mPrefs = getSharedPreferences("SharedPreferences", Context.MODE_PRIVATE);
         mEditor = mPrefs.edit();
 
@@ -332,7 +354,7 @@ public class WifiSelectAndOffload extends Activity implements
 
         quality = Float.parseFloat(sharedPrefs.getString("listQuality", "0.4"));
 
-        serverDelay = Integer.parseInt(sharedPrefs.getString("listServerDelay", "1"));
+        serverDelay = Double.parseDouble(sharedPrefs.getString("listServerDelay", "1"));
 
 
         scanWifi.setOnClickListener(mScanWifiOnClickListener);
@@ -341,8 +363,12 @@ public class WifiSelectAndOffload extends Activity implements
         show.setOnClickListener(mShowWifiConfigurationListener);
         scan.setOnClickListener(mScanListener);
 
+
         request.setOnClickListener(mRequestWifi);
 
+        showBattery.setOnClickListener(mShowBattery);
+
+        resetBattery.setOnClickListener(mResetBattery);
 
         if (mPrefs.contains("KEY_RECEIVE_ON")) {
             mReceiveNetwork = mPrefs.getBoolean("KEY_RECEIVE_ON", false);
@@ -578,6 +604,7 @@ public class WifiSelectAndOffload extends Activity implements
                             int seconds = calendar.get(Calendar.SECOND);
 
                             Log.e("error", "Offloading starts");
+                            mTextView.setText("Finished: " + (count-1)*1.0/maxCount *100+ "%\n");
                             mTextView.append(hours + ":" + mins + ":" + seconds + " Start upload." + "\n");
                             writeToFile(hours + ":" + mins + ":" + seconds + " Start upload.", "OffloadingLog.txt");
                         }
@@ -618,7 +645,7 @@ public class WifiSelectAndOffload extends Activity implements
 
 
                     try {
-                        Thread.sleep(serverDelay * 1000);
+                        Thread.sleep((int)serverDelay * 1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -691,6 +718,7 @@ public class WifiSelectAndOffload extends Activity implements
 
                             mTextView.append(hours + ":" + mins + ":" + seconds + " Download success." + "\n");
                             writeToFile(hours + ":" + mins + ":" + seconds + " Download success.", "OffloadingLog.txt");
+
                         }
                     });
 
@@ -720,7 +748,7 @@ public class WifiSelectAndOffload extends Activity implements
 
 
                                         long endingTime = calendar.getTimeInMillis();
-                                        mTextView.append(hours + ":" + mins + ":" + seconds + " Offload completes. Overall time: " + (endingTime - startingTime) / 1000.0 + "\n");
+                                        mTextView.setText(hours + ":" + mins + ":" + seconds + " Offload completes. Overall time: " + (endingTime - startingTime) / 1000.0 + "\n");
                                         writeToFile(hours + ":" + mins + ":" + seconds + " Offload completes.", "OffloadingLog.txt");
                                         Log.e("error", "Offloading ends");
 

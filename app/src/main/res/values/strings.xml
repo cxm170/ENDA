@@ -16,7 +16,8 @@
     <string name="showWifiConfiguration">Show</string>
     <string name="scanAndChoose">Scan</string>
     <string name="requestWifiSelect">Request</string>
-
+    <string name="showBattery">Battery</string>
+    <string name="resetBattery">Reset</string>
     <!--  Menu items -->
     <string name="settings">Settings</string>
     <string name="refresh">Refresh</string>

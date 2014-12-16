@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PhotoIntentActivity.iml" filepath="$PROJECT_DIR$/PhotoIntentActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ENDA.iml" filepath="$PROJECT_DIR$/ENDA.iml" />
       <module fileurl="file://$PROJECT_DIR$/SelectApOffloading.iml" filepath="$PROJECT_DIR$/SelectApOffloading.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

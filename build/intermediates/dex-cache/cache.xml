@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-da40e0f726ba38d3cc5ccb7497a5b1f43c5c4c72.jar"
         jar="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-da40e0f726ba38d3cc5ccb7497a5b1f43c5c4c72.jar" />
+    </item>
     <item
-        dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-9ade5ec4e43d9f0dedde29f0e205b2f48594e1c0.jar"
         jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-9ade5ec4e43d9f0dedde29f0e205b2f48594e1c0.jar" />
+    </item>
     <item
-        dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\classes-574ef313b92c7d82ef2c988cd7742bbdbae728f8.jar"
+        jar="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\classes-7f24a834a589b9d9b270fa2cfb1d6bb260907977.jar" />
+    </item>
+    <item
         jar="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
-    <item
-        dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\classes-d12f985ec78cea36ed07c587efc81863ea6defce.jar"
-        jar="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="C:\Users\cxm170\AndroidStudioProjects\SelectApOffloading\app\build\intermediates\pre-dexed\debug\classes-574ef313b92c7d82ef2c988cd7742bbdbae728f8.jar" />
+    </item>
 
-</pre-dex-items>
+</items>
