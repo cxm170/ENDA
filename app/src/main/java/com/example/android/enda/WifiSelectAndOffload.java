@@ -618,8 +618,19 @@ public class WifiSelectAndOffload extends Activity implements
 
 
                         try {
-
+                            ConnectivityManager connMgr = (ConnectivityManager)
+                                    getSystemService(Context.CONNECTIVITY_SERVICE);
+                            NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+                            if (networkInfo != null && networkInfo.isConnected()){
                             result = (new UploadImage(url, "camera.jpg")).uploadBitmap(offloadingFilePath);
+                            }else{
+                                Log.e("error","Upload fails and now waits for a second.");
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
 
                         } catch (IOException e) {
                             result = null;
@@ -676,25 +687,38 @@ public class WifiSelectAndOffload extends Activity implements
 
                     while (!flagSuccess) {
                         try {
-                            response = httpclient.execute(httpget);
-                            if (response.getStatusLine().getStatusCode() == 200) {
-                                // Get hold of the response entity
-                                HttpEntity entity = response.getEntity();
-                                if (entity != null) {
-                                    InputStream instream = entity.getContent();
-                                    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-                                    String path = Environment.getExternalStorageDirectory().toString() + "/testOffloading/" + timeStamp + ".jpg";
-                                    FileOutputStream output = new FileOutputStream(path);
-                                    int bufferSize = 1024;
-                                    byte[] buffer = new byte[bufferSize];
-                                    int len = 0;
-                                    while ((len = instream.read(buffer)) != -1) {
-                                        output.write(buffer, 0, len);
-                                    }
-                                    output.close();
-                                    flagSuccess = true;
-                                    if (flagSuccess == false)
-                                        Log.e("error", "Attempt to redownload.");
+
+                            ConnectivityManager connMgr = (ConnectivityManager)
+                                    getSystemService(Context.CONNECTIVITY_SERVICE);
+                            NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+                            if (networkInfo != null && networkInfo.isConnected()){
+                                response = httpclient.execute(httpget);
+                                    if (response.getStatusLine().getStatusCode() == 200) {
+                                        // Get hold of the response entity
+                                        HttpEntity entity = response.getEntity();
+                                        if (entity != null) {
+                                            InputStream instream = entity.getContent();
+                                            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+                                            String path = Environment.getExternalStorageDirectory().toString() + "/testOffloading/" + timeStamp + ".jpg";
+                                            FileOutputStream output = new FileOutputStream(path);
+                                            int bufferSize = 1024;
+                                            byte[] buffer = new byte[bufferSize];
+                                            int len = 0;
+                                            while ((len = instream.read(buffer)) != -1) {
+                                                output.write(buffer, 0, len);
+                                            }
+                                            output.close();
+                                            flagSuccess = true;
+                                            if (flagSuccess == false)
+                                                Log.e("error", "Attempt to redownload.");
+                                        }
+                                }
+                            }else{
+                                Log.e("error","Download fails and now waits for a second.");
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
                                 }
                             }
                         } catch (FileNotFoundException e) {
